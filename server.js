@@ -49,6 +49,10 @@ app.get("/", (req, res) => {
     return res.send("HELLO");
 });
 
+app.get("/health-check-path", (req, res) => {
+    return res.status(200).json("OK");
+});
+
 // signup api
 app.post("/signup", async (req, res, next) => {
     try {
